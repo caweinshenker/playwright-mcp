@@ -1,19 +1,25 @@
 {
-  "name": "@playwright/mcp",
-  "version": "0.0.53",
-  "description": "Playwright Tools for MCP",
-  "mcpName": "com.microsoft/playwright-mcp",
+  "name": "playwright-mcp-electron",
+  "version": "0.1.2",
+  "description": "Playwright MCP with Electron desktop application support. Fork of @playwright/mcp with added Electron automation capabilities.",
+  "mcpName": "playwright-mcp-electron",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microsoft/playwright-mcp.git"
+    "url": "git+https://github.com/caweinshenker/playwright-mcp.git"
   },
-  "homepage": "https://playwright.dev",
+  "homepage": "https://github.com/caweinshenker/playwright-mcp",
   "engines": {
     "node": ">=18"
   },
-  "author": {
-    "name": "Microsoft Corporation"
-  },
+  "contributors": [
+    {
+      "name": "Microsoft Corporation",
+      "url": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+      "name": "Colin Weinshenker"
+    }
+  ],
   "license": "Apache-2.0",
   "scripts": {
     "lint": "npm run update-readme",
@@ -38,15 +44,16 @@
     }
   },
   "dependencies": {
-    "playwright": "1.58.0-alpha-1766189059000",
-    "playwright-core": "1.58.0-alpha-1766189059000"
+    "playwright-electron-mcp": "1.58.0-alpha.1",
+    "playwright-core": "1.58.0-alpha-2025-12-30"
   },
   "bin": {
+    "playwright-mcp-electron": "cli.js",
     "mcp-server-playwright": "cli.js"
   },
   "devDependencies": {
     "@modelcontextprotocol/sdk": "^1.24.0",
-    "@playwright/test": "1.58.0-alpha-1766189059000",
+    "@playwright/test": "1.58.0-alpha-2025-12-30",
     "@types/node": "^24.3.0"
   }
 }
