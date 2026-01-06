@@ -1,6 +1,6 @@
 {
   "name": "playwright-mcp-electron",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Playwright MCP with Electron desktop application support. Fork of @playwright/mcp with added Electron automation capabilities.",
   "mcpName": "playwright-mcp-electron",
   "repository": {
