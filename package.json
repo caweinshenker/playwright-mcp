@@ -1,6 +1,6 @@
 {
   "name": "playwright-mcp-electron",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Playwright MCP with Electron desktop application support. Fork of @playwright/mcp with added Electron automation capabilities.",
   "mcpName": "playwright-mcp-electron",
   "repository": {
@@ -21,21 +21,7 @@
     }
   ],
   "license": "Apache-2.0",
-  "scripts": {
-    "lint": "npm run update-readme",
-    "update-readme": "node update-readme.js",
-    "docker-build": "docker build --no-cache -t playwright-mcp-dev:latest .",
-    "docker-rm": "docker rm playwright-mcp-dev",
-    "docker-run": "docker run -it -p 8080:8080 --name playwright-mcp-dev playwright-mcp-dev:latest",
-    "test": "playwright test",
-    "ctest": "playwright test --project=chrome",
-    "ftest": "playwright test --project=firefox",
-    "wtest": "playwright test --project=webkit",
-    "dtest": "MCP_IN_DOCKER=1 playwright test --project=chromium-docker",
-    "npm-publish": "npm run clean && npm run test && npm publish",
-    "copy-config": "cp ../playwright/packages/playwright/src/mcp/config.d.ts . && perl -pi -e \"s|import type \\* as playwright from 'playwright-core';|import type * as playwright from 'playwright';|\" ./config.d.ts",
-    "roll": "npm run copy-config && npm run lint"
-  },
+  "scripts": {},
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -44,7 +30,7 @@
     }
   },
   "dependencies": {
-    "playwright-electron-mcp": "1.58.0-alpha.1",
+    "playwright-electron-mcp": "1.58.0-alpha.2",
     "playwright-core": "1.58.0-alpha-2025-12-30"
   },
   "bin": {
